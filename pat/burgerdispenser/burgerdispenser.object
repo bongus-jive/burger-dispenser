@@ -1,0 +1,39 @@
+{
+  "objectName" : "pat_burgerdispenser",
+  "colonyTags" : ["outpost","storage"],
+  "rarity" : "Essential",
+  "objectType" : "container",
+  "tooltipKind" : "container",
+  "description" : "how",
+  "shortdescription" : "toilet",
+  "race" : "generic",
+  "category" : "",
+  "price" : 69,
+  "printable" : false,
+  "health" : 1.5,
+
+  "inventoryIcon" : "icon.png",
+  "orientations" : [
+    {
+      "dualImage" : "burgerdispenser.png:<color>.<key>",
+
+      "imagePosition" : [-8, 0],
+      "frames" : 1,
+      "animationCycle" : 1.0,
+
+      "spaceScan" : 0.1,
+      "anchors" : [ "bottom" ]
+
+    }
+  ],
+
+  "openSounds" : [ "/sfx/objects/metaldoor_open.ogg" ],
+  "closeSounds" : [ "/sfx/objects/toilet_flush.ogg" ],
+  "slotCount" : 3,
+  "uiConfig" : "/pat/burgerdispenser/window.config",
+  "frameCooldown" : 5,
+  "autoCloseCooldown" : 3600,
+
+  "scripts" : [ "/pat/burgerdispenser/burgerdispenser.lua" ],
+  "scriptDelta" : 20
+}
