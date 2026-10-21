@@ -30,10 +30,10 @@
   "openSounds" : [ "/sfx/objects/metaldoor_open.ogg" ],
   "closeSounds" : [ "/sfx/objects/toilet_flush.ogg" ],
   "slotCount" : 3,
-  "uiConfig" : "/pat/burgerdispenser/window.config",
+  "uiConfig" : "/pat/burgerdispenser/window/window.config",
   "frameCooldown" : 5,
   "autoCloseCooldown" : 3600,
 
-  "scripts" : [ "/pat/burgerdispenser/burgerdispenser.lua" ],
+  "scripts" : [ "/pat/burgerdispenser/object/burgerdispenser.lua" ],
   "scriptDelta" : 20
 }
