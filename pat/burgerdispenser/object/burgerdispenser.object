@@ -30,5 +30,5 @@
   "autoCloseCooldown": 3600,
 
   "scripts": [ "/pat/burgerdispenser/object/burgerdispenser.lua" ],
-  "scriptDelta": 20
+  "scriptDelta": 60
 }

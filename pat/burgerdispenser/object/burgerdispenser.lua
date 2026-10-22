@@ -1,30 +1,37 @@
-require "/scripts/vec2.lua"
-require "/scripts/util.lua"
+local id, center
 
 function init()
-  slot = 0
+  id = entity.id()
+
+  local b = object.boundBox()
+  center = {
+    b[1] + (b[3] - b[1]) / 2,
+    b[2] + (b[4] - b[2]) / 2
+  }
 end
 
-function update(dt)
-  for i = 0, 3 do
-    local currentitem = world.containerItemAt(entity.id(), i)
-    if (not currentitem or (currentitem.name ~= "hamburger" or (currentitem.name == "hamburger" and currentitem.count > 1))) and i ~= 3 then
-      slot = i
-      break
-    end
-    
-    if i == 3 then
-      slot = util.wrap(slot + 1, 0, 2)
-      break
+function update()
+  world.containerAddItems(id, "hamburger")
+end
+
+function containerCallback()
+  filterItems()
+end
+
+function die()
+  filterItems()
+  world.containerTakeAll(id)
+end
+
+local slots
+function filterItems()
+  if not slots then slots = world.containerSize(id) - 1 end
+
+  for i = 0, slots do
+    local item = world.containerItemAt(id, i)
+    if item and item.name ~= "hamburger" then
+      world.containerTakeAt(id, i)
+      world.spawnItem(item, center, nil, nil, nil, 0.25)
     end
   end
-  
-  local currentitem = world.containerItemAt(entity.id(), slot)
-  if currentitem and (currentitem.name ~= "hamburger" or (currentitem.name == "hamburger" and currentitem.count > 1)) then
-    if currentitem.name == "hamburger" then
-      currentitem.count = currentitem.count - 1
-    end
-    world.spawnItem(currentitem, vec2.add(world.entityPosition(entity.id()), {0, 1}), 1, {}, vec2.rotate({0, 25}, util.toRadians(math.random(-45, 45))), 0.25)
-  end
-  world.containerSwapItemsNoCombine(entity.id(), {name = "hamburger"}, slot)
 end
