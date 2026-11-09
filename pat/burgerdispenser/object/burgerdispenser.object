@@ -28,6 +28,7 @@
   "uiConfig": "/pat/burgerdispenser/window/window.config",
   "frameCooldown": 5,
   "autoCloseCooldown": 3600,
+  "itemAgeMultiplier": 0.0,
 
   "scripts": [ "/pat/burgerdispenser/object/burgerdispenser.lua" ],
   "scriptDelta": 60
