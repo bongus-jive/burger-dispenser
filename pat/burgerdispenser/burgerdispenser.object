@@ -37,6 +37,7 @@
   "burgerItems": [
     { "item": "hamburger", "weight": 1 },
     { "item": "cheeseburger", "weight": 0.5 },
-    { "item": "sb_alienburger", "weight": 0.1 }
+    { "item": "sb_alienburger", "weight": 0.1 },
+    { "item": "zcrab_bigmac", "weight": 0.02 }
   ]
 }
