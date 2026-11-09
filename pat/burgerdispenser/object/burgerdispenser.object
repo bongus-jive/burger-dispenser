@@ -31,5 +31,7 @@
   "itemAgeMultiplier": 0.0,
 
   "scripts": [ "/pat/burgerdispenser/object/burgerdispenser.lua" ],
-  "scriptDelta": 60
+  "scriptDelta": 120,
+
+  "burgerTime": 2000
 }
