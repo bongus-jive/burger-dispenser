@@ -22,7 +22,7 @@
     }
   ],
 
-  "openSounds": [ "/sfx/objects/metaldoor_open.ogg" ],
+  "openSounds": [ "/sfx/objects/fridge_open.ogg" ],
   "closeSounds": [ "/sfx/objects/toilet_flush.ogg" ],
   "slotCount": 3,
   "uiConfig": "/pat/burgerdispenser/window/window.config",
