@@ -1,8 +1,7 @@
 {
   "input": [
     { "item": "basictoilet", "count": 1 },
-    { "item": "hamburger", "count": 3 },
-    { "item": "essence", "count": 50 }
+    { "item": "hamburger", "count": 3 }
   ],
   "output": { "item": "pat_burgerdispenser", "count": 1 },
   "groups": [ "plain", "all" ]
