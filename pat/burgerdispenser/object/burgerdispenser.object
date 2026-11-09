@@ -33,5 +33,10 @@
   "scripts": [ "/pat/burgerdispenser/object/burgerdispenser.lua" ],
   "scriptDelta": 120,
 
-  "burgerTime": 2000
+  "burgerTime": 2000,
+  "burgerItems": [
+    { "item": "hamburger", "weight": 1 },
+    { "item": "cheeseburger", "weight": 0.5 },
+    { "item": "sb_alienburger", "weight": 0.1 }
+  ]
 }
