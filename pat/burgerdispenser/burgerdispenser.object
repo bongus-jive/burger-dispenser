@@ -25,12 +25,12 @@
   "openSounds": [ "/sfx/objects/fridge_open.ogg" ],
   "closeSounds": [ "/sfx/objects/toilet_flush.ogg" ],
   "slotCount": 3,
-  "uiConfig": "/pat/burgerdispenser/window/window.config",
+  "uiConfig": "/pat/burgerdispenser/window.config",
   "frameCooldown": 5,
   "autoCloseCooldown": 3600,
   "itemAgeMultiplier": 0.0,
 
-  "scripts": [ "/pat/burgerdispenser/object/burgerdispenser.lua" ],
+  "scripts": [ "burgerdispenser.lua" ],
   "scriptDelta": 120,
 
   "burgerTime": 2000,
