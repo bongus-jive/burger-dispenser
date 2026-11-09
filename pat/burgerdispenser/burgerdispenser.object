@@ -33,7 +33,7 @@
   "scripts": [ "burgerdispenser.lua" ],
   "scriptDelta": 120,
 
-  "burgerTime": 1500,
+  "burgerTime": 500,
   "burgerItems": [
     { "item": "hamburger", "weight": 1 },
     { "item": "cheeseburger", "weight": 0.5 },
