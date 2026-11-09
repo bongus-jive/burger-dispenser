@@ -1,5 +1,4 @@
 local id
-local spawnTime
 
 function init()
   id = entity.id()
@@ -9,18 +8,18 @@ function init()
     storage.startTime = time
   end
 
-  spawnTime = config.getParameter("burgerTime", 1000)
+  self.spawnTime = config.getParameter("burgerTime", 1000)
 end
 
 function update()
   local time = world.time()
   local diff = time - storage.startTime
 
-  if diff > spawnTime then
+  if diff > self.spawnTime then
     storage.startTime = time
 
-    while diff > spawnTime do
-      diff = diff - spawnTime
+    while diff > self.spawnTime do
+      diff = diff - self.spawnTime
       local leftover = world.containerAddItems(id, "hamburger")
       if leftover then break end
     end
